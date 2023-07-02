@@ -1,3 +1,14 @@
 /* importing fonts from google */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@200;400;700;800&family=Roboto+Mono:wght@200;400&family=Roboto:wght@300;400&family=Ysabeau+Office:wght@400;600;700&display=swap');
+
+
+/* setting overall basic style for window */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppons',sans-serif;
+}
+
