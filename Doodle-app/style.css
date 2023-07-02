@@ -118,6 +118,20 @@ section{
 
 }
 
+.colors .options:nth-child(1){
+    background: #fff;
+}
+.colors .options:nth-child(2){
+    background: #000;
+}
+.colors .options:nth-child(3){
+    background: #E02020;
+}
+.colors .options:nth-child(4){
+    background: #6DD400;
+}.colors .options:nth-child(5){
+    background: #4A98F7;
+}
 .colors .option::before{
     position:  absolute;
     content: "";
