@@ -88,7 +88,7 @@ section{
 }
 
 .option:is(:hover, .active) img{
-
     filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
-
 }
+
+.option:is(:hover, .active):where(span, label)
