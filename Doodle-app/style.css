@@ -35,7 +35,10 @@ body{
 .containter{
     display: flex;
     width: 100%;
+    gap:10px;
+    padding: 10px;
     max-width: 1050px;
+
 }
 
 section{
@@ -70,5 +73,6 @@ section{
 }
 
 .drawing-board{
-    flex:1;
+    flex: 1;
+    
 }
