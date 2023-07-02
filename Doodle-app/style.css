@@ -62,6 +62,7 @@ section{
 .row .options .option{
 
     display:flex;
+    cursor: pointer;
     align-items:center;
     margin-bottom: 10px;
 
@@ -70,9 +71,24 @@ section{
 .option :where(span, label){
 
     color: #27374D;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option #fill-color{
+    cursor:pointer;
+    height:pointer;
+    width: 14px;
+
 }
 
 .drawing-board{
     flex: 1;
     
+}
+
+.option:is(:hover, .active) img{
+
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+
 }
