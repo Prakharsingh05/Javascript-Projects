@@ -42,3 +42,33 @@ section{
     background: #fff;
     border-radius:7px;
 }
+
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0;
+}
+
+.tools-board .row{
+    margin-bottom: 20px;
+}
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option{
+
+    display:flex;
+    align-items:center;
+    margin-bottom: 10px;
+
+}
+
+.option :where(span, label){
+
+    color: #27374D;
+}
+
+.drawing-board{
+    flex:1;
+}
