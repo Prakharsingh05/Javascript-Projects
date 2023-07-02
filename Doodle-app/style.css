@@ -1,5 +1,14 @@
 /* importing fonts from google */
 
+/* color collection [
+    https://colorhunt.co/palette/27374d526d829db2bfdde6ed
+
+    #27374D;
+    #526D82;
+    #9DB2BF;
+    #DDE6ED;
+] */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@200;400;700;800&family=Roboto+Mono:wght@200;400&family=Roboto:wght@300;400&family=Ysabeau+Office:wght@400;600;700&display=swap');
 
 
@@ -12,3 +21,24 @@
     font-family: 'Poppons',sans-serif;
 }
 
+/* defining body style propertie */
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #27374D;
+
+
+}
+
+.containter{
+    display: flex;
+    width: 100%;
+    max-width: 1050px;
+}
+
+section{
+    background: #fff;
+    border-radius:7px;
+}
