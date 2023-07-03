@@ -133,7 +133,7 @@ section{
 }.colors .option:nth-child(5){
     background: #4A98F7;
 }
-.colors .option:hover::before{
+.colors .option.selected::before{
     position:  absolute;
     content: "";
     top:50%;
@@ -147,6 +147,37 @@ section{
 
 }
 
-.colors .option:first-child:hover::before{
+.colors .option:first-child.selected::before{
     border-color: #ccc;
+}
+
+.buttons button{
+    width:100%;
+    color:#DDE6ED;
+    border:none;
+    outline:none;
+    padding:11px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .clear-canvas{
+    color: #27374D;
+    border : 1px solid #6c757D;
+}
+.clear-canvas:hover{
+   background: red;
+   color:#DDE6ED;
+
+}
+.buttons .save-img{
+    color: #27374D;
+    border : 1px solid #6c757D;
+}
+
+.save-img:hover{
+    background: #27374D ;
+    color:#DDE6ED;
 }
