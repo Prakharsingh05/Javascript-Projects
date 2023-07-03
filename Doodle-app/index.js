@@ -11,14 +11,11 @@ window.addEventListener("load" , ()=>{    //this block code ensures that when th
 })
 
 
-const startDraw=()=> {
 
-            isDrawing = true;
-}
 
 const drawing = (e)=>{
 
-    if(isDrawing) returns; // if isDrawing is false return from here
+    if(!isDrawing) return; // if isDrawing is false return from here
     ctx.lineTo(e.offsetX, e.offsetY);  // lineTo(): This is a method of the canvas context object (ctx). It is used to create a straight line path from the current drawing position to the specified coordinates.
                                       // e.offsetX and e.offsetY: These are the X and Y coordinates of the mouse pointer relative to the target element, in this case, the canvas element. It is assumed that the code is being executed within an event handler, and e represents the event object.
     ctx.stroke(); //stroke(): This is a method of the canvas context object (ctx). It is used to stroke or draw the outline of the current path.                      
@@ -26,7 +23,8 @@ const drawing = (e)=>{
 
 
 
-canvas.addEventListener("mousedown" , startDraw);
+canvas.addEventListener("mousedown",()=> isDrawing = true);
 canvas.addEventListener("mousemove",drawing);
+canvas.addEventListener("mouseup" , ()=> isDrawing = false);
 
 
