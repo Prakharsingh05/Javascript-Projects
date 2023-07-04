@@ -33,6 +33,13 @@ const drawing = (e)=>{
 
 
 toolbtns.forEach(btn => {
+    btn.addEventListener("click" , ()=>{     //adding click event to all tool option
+
+
+            console.log(btn.id)
+
+    })
+
     
 });
 
