@@ -1,9 +1,13 @@
 
 
 const canvas = document.querySelector("canvas");
+
+toolbtns = document.querySelectorAll(); 
 ctx = canvas.getContext("2d");//ctx: It refers to the canvas context object. The canvas context represents the drawing area of the canvas and provides methods and properties for drawing shapes and images on it.
 
 let isDrawing = false;
+brushWidth =5;
+
 
 window.addEventListener("load" , ()=>{    //this block code ensures that when the "load" event is triggered, the canvas element is resized to match its offset dimensions, allowing for accurate rendering and positioning of graphics within the canvas.
     canvas.width = canvas.offsetWidth;
@@ -23,7 +27,12 @@ const drawing = (e)=>{
 
 
 
-canvas.addEventListener("mousedown",()=> isDrawing = true);
+canvas.addEventListener("mousedown",()=> {
+    isDrawing = true;
+    ctx.beginPath(); // creating new path to draw
+    ctx.lineWidth = brushWidth; // passing brushsize as line width
+
+});
 canvas.addEventListener("mousemove",drawing);
 canvas.addEventListener("mouseup" , ()=> isDrawing = false);
 
