@@ -2,11 +2,13 @@
 
 const canvas = document.querySelector("canvas");
 
-toolbtns = document.querySelectorAll(); 
+toolbtns = document.querySelectorAll(".tool"); 
 ctx = canvas.getContext("2d");//ctx: It refers to the canvas context object. The canvas context represents the drawing area of the canvas and provides methods and properties for drawing shapes and images on it.
 
 let isDrawing = false;
 brushWidth =5;
+
+console.log(toolbtns);
 
 
 window.addEventListener("load" , ()=>{    //this block code ensures that when the "load" event is triggered, the canvas element is resized to match its offset dimensions, allowing for accurate rendering and positioning of graphics within the canvas.
@@ -25,6 +27,14 @@ const drawing = (e)=>{
     ctx.stroke(); //stroke(): This is a method of the canvas context object (ctx). It is used to stroke or draw the outline of the current path.                      
 }
 
+
+
+
+
+
+toolbtns.forEach(btn => {
+    
+});
 
 
 canvas.addEventListener("mousedown",()=> {
