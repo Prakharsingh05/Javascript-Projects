@@ -10,7 +10,7 @@ ctx = canvas.getContext("2d");//ctx: It refers to the canvas context object. The
 // global variables with default value
 let prevMouseX , prevMouseY, snapshot,
 isDrawing = false;
-selectedTool = " brush",
+selectedTool = "brush",
 brushWidth =5;
 
 
@@ -42,13 +42,13 @@ const drawCircle = (e)=>{
 
 const drawTraingle = (e) => {
 
-    ctx.beginPath();
+    ctx.beginPath(); // creating new path to draw circle
  
     ctx.moveTo(prevMouseX , prevMouseY); // moving traingle to the mouse pointer 
     ctx.lineTo(e.offsetX , e.offsetY);  // creating first line ac0cording to the mouse pointer
     ctx.lineTo(prevMouseX * 2 - e.offsetX , e.offsetY);
-    ctx.closePath();
-    fillcolor.checked ? ctx.filrectanglectx.stroke(); // if fillColor is checked fill rectangle else draw border rectangle
+    ctx.closePath(); // closing path of a traingle so the third line draw automatically
+    fillcolor.checked ? ctx.fill() : ctx.stroke(); // if fillColor is checked fill rectangle else draw border rectangle
 
 }
 
@@ -78,13 +78,14 @@ const drawing = (e)=>{
             drawRect(e);
         }else if(selectedTool === "circle"){
             drawCircle(e);
-        }else if {
+        }else {
             drawTraingle(e);
         }
+    }
     
 
 
-}
+
 
 
 
@@ -97,9 +98,9 @@ toolbtns.forEach(btn => {
             document.querySelector(".options .active").classList.remove("active"); // removing active class  from the previos option and adding on current clicked option
             btn.classList.add('active');
             selectedTool= btn.id;
-            console.log(btn.id)
+            console.log(selectedTool);
 
-    })
+    });
 
     
 });
@@ -107,13 +108,8 @@ toolbtns.forEach(btn => {
 
 sizeSlider.addEventListener("change"  , ()=> brushWidth = sizeslider.value); // passing slider value as brushSize
 
-canvas.addEventListener("mousedown",()=> {
-    isDrawing = true;
-    ctx.beginPath(); // creating new path to draw
-    ctx.lineWidth = brushWidth; // passing brushsize as line width
-
-});
+canvas.addEventListener("mousedown",startDraw);
 canvas.addEventListener("mousemove",drawing);
-canvas.addEventListener("mouseup" , ()=> isDrawing = false);
+canvas.addEventListener("mouseup" , ()=> isDrawing = false); //
 
 
