@@ -6,6 +6,7 @@ toolbtns = document.querySelectorAll(".tool");
 ctx = canvas.getContext("2d");//ctx: It refers to the canvas context object. The canvas context represents the drawing area of the canvas and provides methods and properties for drawing shapes and images on it.
 
 let isDrawing = false;
+selectedTool = " brush";
 brushWidth =5;
 
 console.log(toolbtns);
@@ -35,7 +36,9 @@ const drawing = (e)=>{
 toolbtns.forEach(btn => {
     btn.addEventListener("click" , ()=>{     //adding click event to all tool option
 
+            document.querySelector(".options . active").classList.remove("active"); // removing active class  from the previos option and adding on current clicked option
 
+            btn.classList.add('active');
             console.log(btn.id)
 
     })
