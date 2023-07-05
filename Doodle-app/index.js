@@ -1,11 +1,12 @@
 
 
-const canvas = document.querySelector("canvas");
+const canvas = document.querySelector("canvas"),
 
-toolbtns = document.querySelectorAll(".tool"); 
-fillcolor = document.querySelector("#fill-color"); 
-sizeSlider = document.querySelector("size-slider"); 
-colorBtns = documen.querySelectorAll(".colors .option");
+toolbtns = document.querySelectorAll(".tool"),
+fillcolor = document.querySelector("#fill-color"), 
+sizeSlider = document.querySelector("size-slider"), 
+colorBtns = documen.querySelectorAll(".colors .option"),
+colorPicker = documen.querySelector("#color-picker"),
 ctx = canvas.getContext("2d");//ctx: It refers to the canvas context object. The canvas context represents the drawing area of the canvas and provides methods and properties for drawing shapes and images on it.
 
 // global variables with default value
@@ -60,7 +61,8 @@ const startDraw = (e) =>{
     prevMouseY = e.offsetY; // passing current mouseY positon as prevMouseY value
     ctx.beginPath();// craeting new path to draw
     ctx.lineWidth = brushWidth; // pasaing  brushsize as line width4
-
+    ctx.strokeStyle =selectedColor; // passing selected color as stroke style
+    ctx.fillStyle =selectedColor; // passing selectedcolor as fill style
     // copying canvas data & passing as snapshot value... this avoids dragging the image
     snapshot = ctx.getImageData(0 , 0 , canvas.width , canvas.height);
 
@@ -114,9 +116,17 @@ colorBtns.forEach(btn =>{
     btn.addEventListener("click", ()=> { // adding click event to all color button
         document.querySelector(".options .selected").classList.remove("selected"); // removing active class  from the previos option and adding on current clicked option
         btn.classList.add("selected");
+        //passing selected btn backgound color as selectedColor value
         selectedColor = window.getComputedStyle(btn).getPropertyValue("background-color");
-    })
+    });
+});
+
+colorPicker.addEventListener("change" , ()=>{
+    // passing picked color value from color picker to last color btn background
+    colorPicker.parentElement.style.background =colorPicker.value;
+    colorPicker.parentElement.click();
 })
+
 
 canvas.addEventListener("mousedown",startDraw);
 canvas.addEventListener("mousemove",drawing);
