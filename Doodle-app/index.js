@@ -5,6 +5,7 @@ const canvas = document.querySelector("canvas");
 toolbtns = document.querySelectorAll(".tool"); 
 fillcolor = document.querySelector("#fill-color"); 
 sizeSlider = document.querySelector("size-slider"); 
+colorBtns = documen.querySelectorAll(".colors .option");
 ctx = canvas.getContext("2d");//ctx: It refers to the canvas context object. The canvas context represents the drawing area of the canvas and provides methods and properties for drawing shapes and images on it.
 
 // global variables with default value
@@ -12,6 +13,7 @@ let prevMouseX , prevMouseY, snapshot,
 isDrawing = false;
 selectedTool = "brush",
 brushWidth =5;
+selectedColor = "#000";
 
 
 
@@ -107,6 +109,14 @@ toolbtns.forEach(btn => {
 
 
 sizeSlider.addEventListener("change"  , ()=> brushWidth = sizeslider.value); // passing slider value as brushSize
+
+colorBtns.forEach(btn =>{
+    btn.addEventListener("click", ()=> { // adding click event to all color button
+        document.querySelector(".options .selected").classList.remove("selected"); // removing active class  from the previos option and adding on current clicked option
+        btn.classList.add("selected");
+        selectedColor = window.getComputedStyle(btn).getPropertyValue("background-color");
+    })
+})
 
 canvas.addEventListener("mousedown",startDraw);
 canvas.addEventListener("mousemove",drawing);
