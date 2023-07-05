@@ -9,7 +9,7 @@
     #DDE6ED;
 ] */
 
-/* Import Google font - Poppins */
+
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 *{
@@ -23,7 +23,7 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #4A98F7;
+  background: #27374D;
 }
 .container{
   display: flex;
@@ -142,11 +142,11 @@ section{
 }
 .clear-canvas:hover{
   color: #fff;
-  background: #6C757D;
+  background: #526D82;
 }
 .buttons .save-img{
-  background: #4A98F7;
-  border: 1px solid #4A98F7;
+  background: #27374D;
+  border: 1px solid #526D82;
 }
 .drawing-board{
   flex: 1;
