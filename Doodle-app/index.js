@@ -16,12 +16,7 @@ selectedTool = "brush",
 brushWidth =5;
 selectedColor = "#000";
 
-const setCanvasBackground = () => {
-    // setting whole canvas background to white, so the downloaded img background will be white
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = selectedColor; // setting fillstyle back to the selectedColor, it'll be the brush color
-}
+
 
 
 window.addEventListener("load" , ()=>{    //this block code ensures that when the "load" event is triggered, the canvas element is resized to match its offset dimensions, allowing for accurate rendering and positioning of graphics within the canvas.
