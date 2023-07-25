@@ -13,6 +13,7 @@ body{
     align-items: center;//When `align-items` is set to `center`, the flex items will be aligned to the center of the cross axis. For example, if you have a flex container with two flex items, they will both be aligned to the center of the container.
     padding: 30px 0;//Sure, `padding: 30px 0` sets the padding of an element to 30 pixels on the top and bottom, and 0 pixels on the left and right.
     min-height: 100vh;//The `vh` unit stands for "viewport height", so this property will set the minimum height of the element to be equal to the height of the viewport.
+
 }
 
 img{
