@@ -16,5 +16,27 @@ body{
 }
 
 img{
-    /* max-width: 100%;/ The `%` unit stands for "percentage", so this property will set the maximum width of the element to be equal to the width of its parent element. */
+     max-width: 100%;// The `%` unit stands for "percentage", so this property will set the maximum width of the element to be equal to the width of its parent element. */
+}
+
+p {
+	margin-bottom: 5px;//The `px` unit stands for "pixels", so this property will set the bottom margin of the element to be 5 pixels.
+}
+
+h3{
+    margin: 0;
+
+}
+
+h5{
+    margin: 10px 0;
+}
+
+li{
+    margin-bottom:0;
+}
+
+/meal{
+
+    margin:20px 0;
 }
