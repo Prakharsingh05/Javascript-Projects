@@ -7,5 +7,6 @@
 // This can be useful for making sure that your elements are the correct size, even when they have padding or borders.
 
 body{
-    display: flex;
+    display: flex;//The `display: flex` property is used to create a flex container. A flex container is a block-level element that can be used to arrange its child elements in a flexible way.
+    flex-direction: column ; //`flex-direction: column` is a CSS property that specifies the direction of the flex items in a flex container. By default, flex items are arranged in a row.
 }
