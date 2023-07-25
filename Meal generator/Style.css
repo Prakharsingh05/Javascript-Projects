@@ -1,1 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+//This means that the total width and height of an element will include the padding and border, instead of just the content.
+// This can be useful for making sure that your elements are the correct size, even when they have padding or borders.
+
+body{
+    display: flex;
+}
