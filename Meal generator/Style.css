@@ -14,3 +14,7 @@ body{
     padding: 30px 0;//Sure, `padding: 30px 0` sets the padding of an element to 30 pixels on the top and bottom, and 0 pixels on the left and right.
     min-height: 100vh;//The `vh` unit stands for "viewport height", so this property will set the minimum height of the element to be equal to the height of the viewport.
 }
+
+img{
+    /* max-width: 100%;/ The `%` unit stands for "percentage", so this property will set the maximum width of the element to be equal to the width of its parent element. */
+}
