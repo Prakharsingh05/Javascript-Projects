@@ -68,3 +68,14 @@ h1 {
 .cats_list li {
 	margin: 10px;
 }
+
+.choose_cat {
+	background: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Press Start 2P';
+	width: 150px;
+	height: 150px;
+}
+
