@@ -2,3 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
+*{
+    box-sizing: border-box;//This means that the total width and height of an element will include the padding and border, instead of just the content.
+    // This can be useful for making sure that your elements are the correct size, even when they have padding or borders.
+    
+}
+body{
+    background-color: #2A2F4F;
+    color: #fff;
+    flex-direction: column;
+	font-family: 'Press Start 2P';
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+a {
+	color: #fff;
+}
+
+h1 {
+	line-height: 1.4;
+}
