@@ -40,3 +40,18 @@ h1 {
 	margin-top: -100vh;
 }
 
+.btn {
+	border: 0;
+	background-color: #fff;
+	color: #516dff;
+	cursor: pointer;
+	font-family: 'Press Start 2P';
+	padding: 15px 20px;
+}
+.btn:hover {
+	opacity: 0.9;
+}
+
+.btn:active {
+	opacity: 0.7;
+}
