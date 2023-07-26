@@ -57,7 +57,7 @@ h1 {
 }
 
 
-.insects_list {
+.cats_list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -65,6 +65,6 @@ h1 {
 	padding: 0;
 }
 
-.insects_list li {
+.cats_list li {
 	margin: 10px;
 }
