@@ -36,21 +36,3 @@ h1 {
 	width: 100vw;
 }
 
-a{
-    color: #fff;
-}
-
-h1 {
-    line-height: 1.4;
-}
-
-.screen {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	transition: margin 0.75s linear;
-	height: 100vh;
-	width: 100vw;
-}
-
