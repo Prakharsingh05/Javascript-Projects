@@ -36,3 +36,7 @@ h1 {
 	width: 100vw;
 }
 
+.screen.up {
+	margin-top: -100vh;
+}
+
