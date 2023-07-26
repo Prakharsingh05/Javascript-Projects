@@ -57,4 +57,14 @@ h1 {
 }
 
 
+.insects_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
 
+.insects_list li {
+	margin: 10px;
+}
