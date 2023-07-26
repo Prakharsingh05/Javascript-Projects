@@ -79,3 +79,8 @@ h1 {
 	height: 150px;
 }
 
+.choose_cat:hover {
+	background-color: #fff;
+	color: #516dff;
+}
+
