@@ -25,3 +25,14 @@ a {
 h1 {
 	line-height: 1.4;
 }
+
+.screen {
+	display: flex;
+	align-items: center; /* This property takes a value of `center`, which will center the element vertically. */
+	justify-content: center;
+	flex-direction: column;
+	transition: margin 0.75s linear;
+	height: 100vh;
+	width: 100vw;
+}
+
